@@ -4,9 +4,9 @@
   <head>
     <meta charset="utf-8">
     <title>
-      ShehanRashmika - Homepage
+      ShehanRashmika
     </title>
-    <meta name="description" content="Personal CV/Resume HTML5 Template">
+    <meta name="description" content="Shehan Rashmika Portfolio">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!--Favicon-->
@@ -85,8 +85,8 @@
               <div class="vlt-navbar-contacts">
                 <a href="tel:+971527827667">
                   <!--Button-->
-                  <a id="downloadButton" class="vlt-btn vlt-btn--primary vlt-btn--md" target="_self">
-                    Download Resume
+                  <a href="https://shehanrashmika.github.io/portfolio/assets/pdf/cv.pdf" class="vlt-btn vlt-btn--primary vlt-btn--md" target="_blank">
+                   View My Resume
                   </a>
                 </a>
               </div>
@@ -223,8 +223,8 @@
                      <div class="vlt-gap-20">
                     </div>
  				<div class="vlt-animated-block" data-animation-name="fadeInUpSm" style="animation-delay:.3s; animation-duration:700ms;">
-                      <a id="downloadButton" class="vlt-btn vlt-btn--primary vlt-btn--md" target="_self"  style="color: white;">
-                    Download Resume
+                      <a href="https://shehanrashmika.github.io/portfolio/assets/pdf/cv.pdf" class="vlt-btn vlt-btn--primary vlt-btn--md" target="_blank"  style="color: white;">
+                    View My Resume
                   </a>
 					</div>
                   </div>
@@ -1107,24 +1107,7 @@
     </script>
     <script src="assets/scripts/vlt-controllers.min.js">
     </script>
-    <script>
-      document.getElementById('downloadButton').addEventListener('click',
-      function() {
 
-        const pdfPath = 'https://shehanrashmika.github.io/portfolio/assets/pdf/cv.pdf';
-        fetch(pdfPath).then(response = >response.blob()).then(blob = >{
-          const url = window.URL.createObjectURL(blob);
-          const a = document.createElement('a');
-          a.href = url;
-          a.download = 'ShehanRashmikaCV.pdf';
-          a.style.display = 'none';
-          document.body.appendChild(a);
-          a.click();
-          window.URL.revokeObjectURL(url);
-        }).
-        catch(error = >console.error('Error:', error));
-      });
-    </script>
   </body>
 
 </html>
